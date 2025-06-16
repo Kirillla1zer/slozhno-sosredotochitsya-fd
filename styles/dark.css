@@ -9,8 +9,40 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-image: url(../images/cover-image-dark.png);
+  --title-decor-color: rgba(0, 0, 40, 1);
+  --title-decor-bg-color: rgba(255, 0, 112, 1);
+  --main-title: rgba(219, 0, 255, 1);
+  --accent-color: rgba(255, 0, 112, 1);
+  --card--text: rgba(241, 178, 206, 1);
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
 }
+
+.theme-dark .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid rgba(255, 0, 112, 1);
+  outline: none;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root.theme-auto {
+    --bg-image: url(../images/cover-image-dark.png);
+    --title-decor-color:rgba(0, 0, 40, 1);
+    --title-decor-bg-color:rgba(255, 0, 112, 1);
+    --main-title:rgba(219, 0, 255, 1);
+    --accent-color:rgba(255, 0, 112, 1);
+    --card--text: rgba(241, 178, 206, 1)
+  }
+
+  .theme-auto .header__theme-menu-button:hover  {
+    border:1px solid rgba(255, 0, 112, 0.4);
+  }
+  
+  .theme-auto .header__theme-menu-button:focus-visible {
+    border:none;
+    outline:none;
+    border-bottom:1px solid rgba(255, 0, 112, 1);
+  }
+} */
