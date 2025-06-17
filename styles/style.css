@@ -5,8 +5,8 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--bg-image);
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -17,30 +17,6 @@
   padding: var(--padding);
   min-block-size: 668px;
   block-size: 100vh;
-}
-
-.decorated-zone::before {
-  content: "";
-  position: absolute;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
-  background-color: transparent;
-  inline-size: 25px;
-  block-size: 25px;
-  inset-block-start: var(--padding);
-  inset-inline-end: var(--padding);
-}
-
-.decorated-zone::after {
-  content: "";
-  position: absolute;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
-  background-color: transparent;
-  inline-size: 25px;
-  block-size: 25px;
-  inset-block-end: var(--padding);
-  inset-inline-start: var(--padding);
 }
 
 .header__theme-menu {
@@ -62,7 +38,7 @@
 }
 
 .header__theme-menu-item {
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 1;
@@ -91,7 +67,7 @@
   justify-content: center;
   align-items: center;
   color: var(--accent-color);
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
@@ -119,7 +95,7 @@
   justify-self: start;
   margin-block-end: 55px;
   color: var(--main-title);
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
@@ -130,7 +106,7 @@
   display: block;
   justify-self: end;
   margin-block-end: 64px;
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -149,7 +125,7 @@
 
 .five-easy-advice {
   margin-block-start: 20px;
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -161,14 +137,14 @@
 
 .title_of_cards {
   color: var(--accent-color);
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
 }
 
 .title_of_images {
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -179,7 +155,7 @@
 
 .card__title {
   margin-block-end: 10px;
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -191,7 +167,7 @@ h4.card__title {
 
 .card__text {
   color: var(--card--text);
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
@@ -219,20 +195,20 @@ h4.card__title {
 }
 
 .gallery__image {
-  inline-size: 100%;
-  block-size: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .footer {
   position: relative;
   display: grid;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   min-block-size: 668px;
   block-size: 100vh;
-  justify-content:center;
-  align-items:center;
 }
 
 .decorated-zone::after {
@@ -262,7 +238,7 @@ h4.card__title {
   justify-self: center;
   align-self: center;
   color: var(--main-title);
-  font-family: var(--font-family), monospace ;
+  font-family: var(--font-family), monospace;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
@@ -346,8 +322,8 @@ h4.card__title {
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
     grid-template-rows: min-content max-content max-content max-content;
+    gap: var(--gap);
   }
 
   .title_of_images {
@@ -361,9 +337,9 @@ h4.card__title {
 
   /* Размешаю картинки по колонкам и по строкам */
   .gallery__image {
-    inline-size: 100%;
     object-fit: cover;
     object-position: center;
+    inline-size: 100%;
     block-size: 100%;
   }
 
@@ -403,7 +379,6 @@ h4.card__title {
 }
 
 @media (width >= 1024px) {
-
   :root {
     --padding: 20px;
   }
@@ -418,9 +393,9 @@ h4.card__title {
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: calc((-1 * (var(--padding))));
     margin-block-end: 114px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__theme-menu {
