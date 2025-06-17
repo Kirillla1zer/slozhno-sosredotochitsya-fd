@@ -6,6 +6,7 @@
   background-image: var(--bg-image);
   background-position: center;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .header {
@@ -18,7 +19,7 @@
   block-size: 100vh;
 }
 
-.header::before {
+.decorated-zone::before {
   content: "";
   position: absolute;
   border-inline-end: 1px solid var(--accent-color);
@@ -30,7 +31,7 @@
   inset-inline-end: var(--padding);
 }
 
-.header::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   border-inline-start: 1px solid var(--accent-color);
@@ -44,7 +45,7 @@
 
 .header__theme-menu {
   margin-block-start: 66px;
-  margin-block-end: 74px;
+  margin-block-end: 66px;
 }
 
 .header__theme-menu-button {
@@ -52,6 +53,7 @@
   padding: 1.5px 13px 1.5px 13px;
   color: var(--accent-color);
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
@@ -60,11 +62,10 @@
 }
 
 .header__theme-menu-item {
-  font-family: "IBM Plex Mono";
+  font-family: var(--font-family), monospace ;
   font-weight: 400;
   font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 0;
+  line-height: 1;
   text-align: center;
 }
 
@@ -75,11 +76,11 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--border-hover);
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid rgba(255, 0, 112, 1);
+  border-bottom: 1px solid var(--border-focus-visible);
   /* border:none; */
   outline: none;
 }
@@ -89,15 +90,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(255, 0, 112, 1);
-  font-family: "IBM Plex Mono";
+  color: var(--accent-color);
+  font-family: var(--font-family), monospace ;
   font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
-  letter-spacing: 0;
+  line-height: 1.4;
   text-align: center;
   inset-inline-end: calc(var(--padding) + 10px);
   inset-block-start: calc(var(--padding) + 0px);
+}
+
+.theme-light .header__bulb {
+  display: none;
 }
 
 .header__bulb::after {
@@ -105,21 +109,20 @@
   display: inline-block;
   margin-inline-start: 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 4px 2px rgba(255, 0, 112, 1);
-  background-color: rgba(255, 0, 112, 1);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
   inline-size: 9px;
   block-size: 9px;
 }
 
 .header__title {
   justify-self: start;
-  margin-block-end: 47px;
+  margin-block-end: 55px;
   color: var(--main-title);
-  font-family: "IBM Plex mono";
+  font-family: var(--font-family), monospace ;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  letter-spacing: 0;
   text-shadow: 4px 4px 0 var(--title-decor-bg-color);
 }
 
@@ -127,11 +130,10 @@
   display: block;
   justify-self: end;
   margin-block-end: 64px;
-  font-family: "IBM Plex Mono";
+  font-family: var(--font-family), monospace ;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
-  letter-spacing: 0;
+  line-height: 1.3;
   inline-size: 354px;
 }
 
@@ -145,13 +147,12 @@
   background-color: var(--title-decor-bg-color);
 }
 
-.second_title {
+.five-easy-advice {
   margin-block-start: 20px;
-  font-family: "IBM Plex Mono";
+  font-family: var(--font-family), monospace ;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
-  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 .block_for_cards {
@@ -160,19 +161,17 @@
 
 .title_of_cards {
   color: var(--accent-color);
-  font-family: IBM Plex Mono;
+  font-family: var(--font-family), monospace ;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
-  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 .title_of_images {
-  font-family: "IBM Plex Mono";
+  font-family: var(--font-family), monospace ;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
-  letter-spacing: 0;
+  line-height: 1.3;
 }
 .card {
   margin-block-start: 20px;
@@ -180,11 +179,10 @@
 
 .card__title {
   margin-block-end: 10px;
-  font-family: "IBM Plex Mono";
+  font-family: var(--font-family), monospace ;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
-  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 h4.card__title {
@@ -193,11 +191,10 @@ h4.card__title {
 
 .card__text {
   color: var(--card--text);
-  font-family: "IBM Plex Mono";
+  font-family: var(--font-family), monospace ;
   font-weight: 400;
   font-size: 18px;
-  line-height: 23.4px;
-  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 .card__text-with-link {
@@ -218,11 +215,14 @@ h4.card__title {
 
 .gallery {
   display: grid;
-  gap: 10px;
+  gap: var(--gap);
 }
 
 .gallery__image {
   inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .footer {
@@ -235,7 +235,7 @@ h4.card__title {
   align-items:center;
 }
 
-.footer::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   border-inline-start: 1px solid var(--accent-color);
@@ -247,7 +247,7 @@ h4.card__title {
   inset-inline-start: var(--padding);
 }
 
-.footer::before {
+.decorated-zone::before {
   content: "";
   position: absolute;
   border-inline-end: 1px solid var(--accent-color);
@@ -262,11 +262,10 @@ h4.card__title {
   justify-self: center;
   align-self: center;
   color: var(--main-title);
-  font-family: "IBM Plex Mono";
+  font-family: var(--font-family), monospace ;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  letter-spacing: 0;
   text-shadow: 2px 2px 0px var(--title-decor-bg-color);
 }
 
@@ -305,44 +304,41 @@ h4.card__title {
   }
   /* Размещаю гриды для первого блока карточек + title */
 
-  .block_for_cards:first-child {
+  .why {
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 20px;
   }
 
-  .block_for_cards:first-child .title_of_cards {
+  .why .title_of_cards {
     grid-column: 1/2;
   }
 
-  .block_for_cards:first-child .card {
+  .why .card {
     grid-column: 2/3;
     margin-block-start: 0px;
-  }
-
-  .block_for_cards:nth-child(2) .title_of_cards {
-    grid-column: 1/2;
   }
 
   /* Размещаю 3ий блок в гридах */
 
-  .block_for_cards:nth-child(3) {
+  .how {
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 20px;
   }
 
-  .block_for_cards:nth-child(3) .title_of_cards {
+  .how .title_of_cards {
     grid-column: 1/2;
     grid-row: 1/3;
   }
 
-  .block_for_cards:nth-child(3) .second_title {
+  .how .five-easy-advice {
     grid-column: 2/3;
     margin-block-start: 0px;
     block-size: max-content;
   }
-  .block_for_cards:nth-child(3) .card {
+
+  .how .card {
     grid-column: 2/3;
     margin-block-start: 0px;
   }
@@ -350,44 +346,40 @@ h4.card__title {
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
     grid-template-rows: min-content max-content max-content max-content;
-    gap: 20px;
   }
 
   .title_of_images {
     grid-column: 1/4;
     grid-row: 1/2;
-    font-family: "IBM Plex Mono";
+    font-family: var(--font-family), monospace;
     font-weight: 700;
     font-size: 18px;
-    line-height: 23.4px;
-    letter-spacing: 0;
+    line-height: 1.3;
   }
 
   /* Размешаю картинки по колонкам и по строкам */
+  .gallery__image {
+    inline-size: 100%;
+    object-fit: cover;
+    object-position: center;
+    block-size: 100%;
+  }
 
   .sunset-image {
     grid-column: 1/3;
     grid-row: 2/3;
-    object-fit: cover;
-    object-position: center;
-    block-size: 100%;
   }
 
   .ice-cream-image {
     grid-column: 3/4;
     grid-row: 2/4;
-    object-fit: cover;
-    object-position: center;
-    block-size: 100%;
   }
 
   .tape-image {
     grid-column: 1/2;
     grid-row: 3/5;
-    object-fit: cover;
-    object-position: center;
-    block-size: 100%;
   }
 
   .books-image {
@@ -398,8 +390,6 @@ h4.card__title {
   .street-image {
     grid-column: 2/4;
     grid-row: 4/5;
-    object-fit: cover;
-    object-position: center;
     block-size: 100%;
   }
 
@@ -436,7 +426,7 @@ h4.card__title {
   .header__theme-menu {
     justify-self: center;
     margin-block-start: 0px;
-    margin-block-end: 273px;
+    margin-block-end: 278px;
   }
 
   .header__theme-menu-list {
@@ -456,31 +446,31 @@ h4.card__title {
 
   /* Размещаю второй блок в гридах */
 
-  .block_for_cards:nth-child(2) {
+  .what {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
     grid-template-rows: min-content max-content;
     gap: 20px;
   }
 
-  .block_for_cards:nth-child(2) .title_of_cards {
+  .what .title_of_cards {
     grid-column: 1/4;
     grid-row: 1/2;
     max-inline-size: 315px;
   }
 
-  .block_for_cards:nth-child(2) .card:nth-of-type(1) {
+  .what .multitasking {
     grid-column: 1/2;
     grid-row: 2/3;
     margin-block-start: 0px;
   }
 
-  .block_for_cards:nth-child(2) .card:nth-of-type(2) {
+  .what .food {
     grid-column: 2/3;
     grid-row: 2/3;
     margin-block-start: 0px;
   }
-  .block_for_cards:nth-child(2) .card:nth-of-type(3) {
+  .what .gadgets {
     grid-column: 3/4;
     grid-row: 2/3;
     margin-block-start: 0px;

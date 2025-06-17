@@ -10,20 +10,16 @@
   --accent-color: rgba(255, 0, 112, 1);
   --card--text: rgba(241, 178, 206, 1);
   --padding: 10px;
+  --gap: 10px;
   --bg-color: rgba(0, 0, 40, 1);
-}
-
-.theme-dark .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
-}
-
-.theme-dark .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid rgba(255, 0, 112, 1);
-  outline: none;
+  --font-family: 'IBM Plex Mono';
+  --border-hover: rgba(255, 0, 112, 0.4);
+  --border-focus-visible: rgba(255, 0, 112, 1);
 }
 
 @media (width >= 768px) {
   :root {
+    --gap: 20px;
     --padding: 20px;
   }
 }
