@@ -15,6 +15,7 @@
   --font-family: "IBM Plex Mono";
   --border-hover: rgba(255, 0, 112, 0.4);
   --border-focus-visible: rgba(255, 0, 112, 1);
+  --header_bulp-display: flex;
 }
 
 @media (width >= 768px) {
