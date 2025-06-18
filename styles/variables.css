@@ -12,7 +12,7 @@
   --padding: 10px;
   --gap: 10px;
   --bg-color: rgba(0, 0, 40, 1);
-  --font-family: 'IBM Plex Mono';
+  --font-family: "IBM Plex Mono";
   --border-hover: rgba(255, 0, 112, 0.4);
   --border-focus-visible: rgba(255, 0, 112, 1);
 }

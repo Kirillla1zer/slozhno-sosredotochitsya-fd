@@ -20,7 +20,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root.theme-auto {
+  :root {
     --bg-image: url(../images/cover-image-light.png);
     --accent-color: rgba(53, 52, 48, 1);
     --title-decor-color: rgba(53, 52, 48, 1);
@@ -28,19 +28,5 @@
     --main-title: rgba(255, 194, 230, 1);
     --card--text: rgba(53, 52, 48, 1);
     --bg-color: rgba(255, 241, 247, 1);
-  }
-
-  .theme-auto .header__theme-menu-button:hover {
-    border: 1px solid rgba(50, 49, 45, 0.4);
-  }
-
-  .theme-auto .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid rgba(53, 52, 48, 1);
-    /* border:none; */
-    outline: none;
-  }
-
-  .theme-auto .header__bulb {
-    display: none;
   }
 }
